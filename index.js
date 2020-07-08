@@ -24,8 +24,8 @@ app.post("/api/sendHSCresponse", async (req, res) => {
 
     let caste = req.body.queryResult &&
         req.body.queryResult.parameters &&
-        req.body.queryResult.parameters.HSCmarks
-        ? req.body.queryResult.parameters.HSCmarks
+        req.body.queryResult.parameters.caste
+        ? req.body.queryResult.parameters.caste
         : "Seems like some problem. Speak again.";
 
 
