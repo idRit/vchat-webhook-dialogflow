@@ -6,6 +6,12 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.get("/", async (req, res) => {
+    return res.json({
+        status: "working"
+    });
+});
+
 app.post("/api/sendResponse", async (req, res) => {
     let speech =
         req.body.queryResult &&
