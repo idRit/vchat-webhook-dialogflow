@@ -28,6 +28,8 @@ app.post("/api/sendHSCresponse", async (req, res) => {
         ? req.body.queryResult.parameters.caste
         : "Seems like some problem. Speak again.";
 
+    console.log({caste, marks});
+
 
     if (caste == "open") {
         if (marks >= 150) {
