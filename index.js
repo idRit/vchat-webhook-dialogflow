@@ -12,7 +12,7 @@ app.get("/", async (req, res) => {
     });
 });
 
-app.post("/api/sendResponse", async (req, res) => {
+app.post("/api/sendHSCresponse", async (req, res) => {
     let speech =
         req.body.queryResult &&
             req.body.queryResult.parameters &&
