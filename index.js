@@ -13,12 +13,33 @@ app.get("/", async (req, res) => {
 });
 
 app.post("/api/sendHSCresponse", async (req, res) => {
-    let speech =
+    let speech = "";
+
+    let marks =
         req.body.queryResult &&
             req.body.queryResult.parameters &&
             req.body.queryResult.parameters.HSCmarks
             ? req.body.queryResult.parameters.HSCmarks
             : "Seems like some problem. Speak again.";
+
+    let caste = req.body.queryResult &&
+        req.body.queryResult.parameters &&
+        req.body.queryResult.parameters.HSCmarks
+        ? req.body.queryResult.parameters.HSCmarks
+        : "Seems like some problem. Speak again.";
+
+
+    if (caste == "open") {
+        if (marks >= 150) {
+            speech = "Please Enter Your CET score"
+        } else {
+            speech = "Sorry, you are ineligible for admission here, please try BSC IT"
+        }
+    } else if (marks >= 145) {
+        speech = "Please Enter Your CET score"
+    } else {
+        speech = "Sorry, you are ineligible for admission here, please try BSC IT"
+    }
 
     console.log(speech);
 
