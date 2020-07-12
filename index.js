@@ -98,28 +98,28 @@ app.post("/api/sendResponse", async (req, res) => {
         }
     } else {
         switch (menuItem) {
-            case 1:
+            case '1':
                 speech = "Form cost and where it can be purchased";
                 break;
-            case 2:
+            case '2':
                 speech = "Previous year cutoff";
                 break;
-            case 3:
+            case '3':
                 speech = "Placements at VIT";
                 break;
-            case 4:
+            case '4':
                 speech = "Faculty at VIT";
                 break;
-            case 5:
+            case '5':
                 speech = "Here's a document which states what documents are required for admission: https://drive.google.com/file/d/1fiaTg2ZV4LARWL2EBNLUP5sjdQhJKrgi/view?usp=sharing";
                 break;
-            case 6:
+            case '6':
                 speech = "Deadline to submit pending documents";
                 break;
-            case 7:
+            case '7':
                 speech = "Fees Related Information";
                 break;
-            case 8:
+            case '8':
                 speech = "Admission related information";
                 break;
             default:
