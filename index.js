@@ -40,12 +40,50 @@ app.post("/api/sendResponse", async (req, res) => {
     if (CET > 0) {
         if (caste == "open") {
             if (marks >= 150) {
-                speech = "Please Enter Your CET score"
+                speech = `Thank you for the information !
+
+                Reply with a number to get the infromation:
+                
+                
+                1. Form cost and where it can be purchased
+                
+                2. Previous year cutoff
+                
+                3. Placements at VIT
+                
+                4. Faculty at VIT
+                
+                5. Document Required for submission
+                
+                6. Deadline to submit pending documents
+                
+                7. Fees Related Information
+                
+                8. Admission related information`
             } else {
                 speech = "Sorry, you are ineligible for admission here, please try BSC IT"
             }
         } else if (marks >= 145) {
-            speech = "Please Enter Your CET score"
+            speech = `Thank you for the information !
+
+            Reply with a number to get the infromation:
+            
+            
+            1. Form cost and where it can be purchased
+            
+            2. Previous year cutoff
+            
+            3. Placements at VIT
+            
+            4. Faculty at VIT
+            
+            5. Document Required for submission
+            
+            6. Deadline to submit pending documents
+            
+            7. Fees Related Information
+            
+            8. Admission related information`
         } else {
             speech = "Sorry, you are ineligible for admission here, please try BSC IT"
         }
