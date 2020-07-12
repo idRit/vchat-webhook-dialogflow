@@ -111,7 +111,7 @@ app.post("/api/sendResponse", async (req, res) => {
                 speech = "Faculty at VIT";
                 break;
             case 5:
-                speech = "Document Required for submission";
+                speech = "Here's a document which states what documents are required for admission: https://drive.google.com/file/d/1fiaTg2ZV4LARWL2EBNLUP5sjdQhJKrgi/view?usp=sharing";
                 break;
             case 6:
                 speech = "Deadline to submit pending documents";
