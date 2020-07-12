@@ -22,23 +22,33 @@ app.post("/api/sendResponse", async (req, res) => {
             ? req.body.queryResult.parameters.HSCmarks
             : "Seems like some problem. Speak again.";
 
+    let CET =
+        req.body.queryResult &&
+            req.body.queryResult.parameters &&
+            req.body.queryResult.parameters.CETscore
+            ? req.body.queryResult.parameters.CETscore
+            : "Seems like some problem. Speak again.";
+
     let caste = req.body.queryResult &&
         req.body.queryResult.parameters &&
         req.body.queryResult.parameters.caste
         ? req.body.queryResult.parameters.caste
         : "Seems like some problem. Speak again.";
 
-    console.log({caste, marks});
+    console.log({ caste, marks });
 
-
-    if (caste == "open") {
-        if (marks >= 150) {
+    if (CET > 0) {
+        if (caste == "open") {
+            if (marks >= 150) {
+                speech = "Please Enter Your CET score"
+            } else {
+                speech = "Sorry, you are ineligible for admission here, please try BSC IT"
+            }
+        } else if (marks >= 145) {
             speech = "Please Enter Your CET score"
         } else {
             speech = "Sorry, you are ineligible for admission here, please try BSC IT"
         }
-    } else if (marks >= 145) {
-        speech = "Please Enter Your CET score"
     } else {
         speech = "Sorry, you are ineligible for admission here, please try BSC IT"
     }
